@@ -44,7 +44,7 @@ def unet(pretrained_weights = None, input_size = (256,256,1),
     
     resnet_blocks indicates whether the convolutional blocks of the original U-Net architecture are replaced with ResNet blocks or not. 
     By default, convolutional blocks are used rather than ResNet blocks
-    Note that there are two versions of the ResNet blocks: identity or convolutional - see https://machinelearningknowledge.ai/keras-implementation-of-resnet-50-architecture-from-scratch/ and https://medium.com/@nishanksingla/unet-with-resblock-for-semantic-segmentation-dd1766b4ff66
+    Note that there are two versions of the ResNet blocks: identity or convolutional - see https://machinelearningknowledge.ai/keras-implementation-of-resnet-50-architecture-from-scratch/ and https://medium.com/@nishanksingla/unet-with-resblock-for-semantic-segmentation-dd1766b4ff66  
     """
     kernel_sizes = concatenate_kernels_sizes(kernel_sizes_hor, kernel_sizes_up)
     assert resnet_blocks in [False, 'id_ResNet', 'conv_ResNet']
